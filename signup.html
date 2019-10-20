@@ -1,0 +1,76 @@
+<hmtl>
+        <head>
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <style> 
+           body{
+               background-image : url("bg8.jpg");
+            }
+            .f1{
+                margin-top : 150px;
+                background-color: rgba(0, 0, 0, 0.8);
+                border-radius: 20px;
+            }
+            .l1{
+                color:white;
+                letter-spacing: 3px;
+            }
+            .ip1{
+                background-color: transparent;
+                color: white;
+            }
+            .logo{
+                background-color: white;
+                width: 370px;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0;
+                letter-spacing: 2px;
+                word-spacing: 10px;
+                box-shadow: 0 0 10px black;
+            }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 " style="margin-top: 300px; "><h1 class="logo">FOOD HUNGERS</h1></div>
+                    <div class="col-md-6 ">
+                            <center><form class="f1" name="myFormm" action="#" onsubmit="return validateForm()" method="post">
+                                    <i><h1 style="color: white; font-family: Geneva">SIGN UP</h1></i><br>
+                                    <label class="l1">Name</label>&nbsp;&nbsp;&nbsp;<input name="fname" type="text" class="ip1"><br><br>
+                                    <label class="l1">Email</label>&nbsp;&nbsp;&nbsp;<input name="email" type="text" class="ip1"><br><br>
+                                    <label class="l1" style="margin-left:-25px;">Password</label><input name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" class="ip1"><br><br>
+                                    <input type="checkbox" style="margin-left: 20px;" checked required>&nbsp;&nbsp;<label style="color: aqua;"> Remember Me</label><br>
+                                    <button type="submit" class="btn btn-outline-light">SIGN UP</button><br><br>  <a style="color: aqua; margin-left:10px; ">Forgot password</a><br><br>
+                                    <label style="color:white; margin-left:10px;">Already User</label>&nbsp;&nbsp;<a href="logo.html">Login</a>
+                            </form></center>
+                    </div>
+                </div>
+            </div>
+            <script>
+            
+function validateForm() {
+  var x = document.forms["myFormm"]["fname"].value;
+  var y = document.forms["myFormm"]["psw"].value;
+  
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myFormm.email.value))
+  {
+    return (true)
+  }
+  else{
+    alert("You have entered an invalid email address!");
+      return (false);
+  }
+}
+            </script>
+        </body>
+        </hmtl>
